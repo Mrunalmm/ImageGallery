@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Image Gallery with Lightbox</title>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+
+  <header class="gallery-header">
+    <h1>Photo Gallery</h1>
+    <p>Explore high-resolution captures across categories</p>
+  </header>
+
+  <!-- Category Filter Buttons -->
+  <div class="filter-container">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="nature">Nature</button>
+    <button class="filter-btn" data-filter="architecture">Architecture</button>
+    <button class="filter-btn" data-filter="animals">Animals</button>
+  </div>
+
+  <!-- Image Grid -->
+  <main class="gallery-grid" id="galleryGrid">
+    <!-- Original 6 Items -->
+    <div class="gallery-item" data-category="nature">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Mountain Landscape" />
+      <div class="overlay">
+        <h3>Alpine Valley</h3>
+        <p>Nature</p>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="architecture">
+      <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Modern Building" />
+      <div class="overlay">
+        <h3>Geometric Tower</h3>
+        <p>Architecture</p>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="animals">
+      <img src="C:\Users\Shree\Desktop\gallery\images\gaint panda bear.jpg"/>
+      <div class="overlay">
+        <h3>Giant Panda</h3>
+        <p>Animals</p>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="nature">
+      <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80" alt="Foggy Forest" />
+      <div class="overlay">
+        <h3>Misty Forest</h3>
+        <p>Nature</p>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="architecture">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="City Skyscraper" />
+      <div class="overlay">
+        <h3>Glass Skyscraper</h3>
+        <p>Architecture</p>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="animals">
+      <img src="https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=800&q=80" alt="African Lion" />
+      <div class="overlay">
+        <h3>Savannah Lion</h3>
+        <p>Animals</p>
+      </div>
+    </div>
+
+    <!-- NEW ITEM 1 (Nature) -->
+    <div class="gallery-item" data-category="nature">
+      <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=80" alt="Cascading Waterfall" />
+      <div class="overlay">
+        <h3>Cascading Waterfall</h3>
+        <p>Nature</p>
+      </div>
+    </div>
+
+    <!-- NEW ITEM 2 (Architecture) -->
+    <div class="gallery-item" data-category="architecture">
+      <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Modern Villa" />
+      <div class="overlay">
+        <h3>Modern Residence</h3>
+        <p>Architecture</p>
+      </div>
+    </div>
+
+    <!-- NEW ITEM 3 (Animals) -->
+    <div class="gallery-item" data-category="animals">
+      <img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?auto=format&fit=crop&w=800&q=80" alt="Leopard" />
+      <div class="overlay">
+        <h3>Wild Leopard</h3>
+        <p>Animals</p>
+      </div>
+    </div>
+
+    <!-- NEW ITEM 4 (Nature) -->
+    <div class="gallery-item" data-category="nature">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Tropical Beach" />
+      <div class="overlay">
+        <h3>Tropical Coast</h3>
+        <p>Nature</p>
+      </div>
+    </div>
+
+    <!-- NEW ITEM 5 (Architecture) -->
+    <div class="gallery-item" data-category="architecture">
+      <img src="C:\Users\Shree\Desktop\gallery\images\download.webp" />
+      <div class="overlay">
+        <h3>Suspension Bridge</h3>
+        <p>Architecture</p>
+      </div>
+    </div>
+
+    <!-- NEW ITEM 6 (Animals) -->
+    <div class="gallery-item" data-category="animals">
+      <img src="https://images.unsplash.com/photo-1555169062-013468b47731?auto=format&fit=crop&w=800&q=80" alt="Exotic Parrot" />
+      <div class="overlay">
+        <h3>Exotic Parrot</h3>
+        <p>Animals</p>
+      </div>
+    </div>
+
+    <!-- NEW ITEM 7 (Nature) -->
+    <div class="gallery-item" data-category="nature">
+      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Snowy Mountains" />
+      <div class="overlay">
+        <h3>Snow Peaks</h3>
+        <p>Nature</p>
+      </div>
+    </div>
+
+    <!-- NEW ITEM 8 (Animals) -->
+    <div class="gallery-item" data-category="animals">
+      <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?auto=format&fit=crop&w=800&q=80" alt="Red Fox" />
+      <div class="overlay">
+        <h3>Wild Fox</h3>
+        <p>Animals</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+    <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="Enlarged view" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
